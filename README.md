@@ -110,4 +110,8 @@ spring.jpa.show-sql=true
 ```
 Ahora ha instalado y configurado todos los recursos necesarios para implementar y ejecutar la aplicación.
 
- 
+## Ejercicio 3: implementar los cambios en la aplicación web
+1) Conectate con un cliente FTP y sube el jar de la aplicación Java https://github.com/PDSW-ECI/spring-mvc-with-bootstrap, sigue este tutorial https://learn.microsoft.com/en-us/azure/app-service/deploy-ftp?tabs=portal
+
+Configuración del servicio FTP:
+<img width="1495" alt="image" src="https://github.com/PDSW-ECI/labs/assets/4140058/05f5d912-717b-497a-b58c-468368107219">
