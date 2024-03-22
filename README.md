@@ -46,20 +46,32 @@ az mysql flexible-server create --resource-group MyResourceGroup --name mysqldbs
 
 ![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/71241581-c9c5-42ce-892e-71d180adb113)
 
+5) Seleccione **Properties**. Guarde el **Server name** y el **Server admin login name** en un bloc de notas.
+
+![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/776e9804-0407-47aa-8089-639a7b7433b1)
+
+
+6) Seleccione **Connection security**. Habilite la opción **Allow access to Azure services** y guarde los cambios. Esto proporciona acceso a los servicios de Azure para todas las bases de datos de su servidor MySQL.
+
+![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/e52f0190-3a8b-4c1d-a9e5-1178ed3019db)
+
 
 ## Ejercicio 2: actualización de la configuración de la aplicación web
 A continuación, navegue hasta la aplicación web que ha creado. Mientras implementa una aplicación Java, debe cambiar el contenedor web de la aplicación web a Apache Tomcat.
 1) Seleccione **Configuration**. Establezca **Stack settings** como se muestra en la imagen a continuación y haga clic en Guardar.
 
-![image](https://github.com/PDSW-ECI/labs/assets/4140058/2941dc04-5d50-4a71-a0ae-3e005397ab8f)
+![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/081c516f-19af-4790-b158-feba5f5e7230)
+
+![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/ccd53a79-07b8-47cd-a36e-434d4ea003ce)
+
 
 2) Seleccione Overview y click en Browse.
 
-![image](https://github.com/PDSW-ECI/labs/assets/4140058/23e96cc7-473c-4457-aa2c-acce5c7b23ee)
+![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/179aa633-6dde-4af6-b31a-726aaf764cc7)
 
 3) La página web se verá como la imagen de abajo.
 
-![image](https://github.com/PDSW-ECI/labs/assets/4140058/87db1d63-7179-4ce8-a013-a6a1c06056d8)
+![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/49caf315-ff3d-4709-8d5a-664b6efa1b53)
 
 A continuación, debe actualizar las cadenas de conexión para que la aplicación web se conecte correctamente a la base de datos. Hay varias formas de hacerlo, pero para los fines de esta práctica de laboratorio, adoptará un enfoque simple actualizándolo directamente en Azure Portal.
 
@@ -69,14 +81,18 @@ A continuación, debe actualizar las cadenas de conexión para que la aplicació
 
 5) En la ventana Agregar/Editar cadena de conexión, agregue una nueva cadena de conexión MySQL con MyDatabase como nombre, pegue la siguiente cadena para el valor y reemplace MySQL Server Name, su nombre de usuario y su contraseña con los valores apropiados. Haga clic en Actualizar.
 ```java
-jdbc:mysql://{MySQL Server Name}:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user={your user name}&password={your password}
+jdbc:mysql://{cvdsdb.mysql.database.azure.com}:3306/alm?useSSL=true&requireSSL=false&autoReconnect=true&user={mysqldbuser}&password={P2ssw0rd@123}
 ```
 
-![image](https://github.com/PDSW-ECI/labs/assets/4140058/b0d5f0cf-949f-443e-8053-6e7ed2de7aed)
+![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/556fc106-9234-4cbf-a8ed-60d0ce287967)
+
 
 - Nombre del servidor MySQL: Valor que copió previamente de las Propiedades del servidor MySQL.
 - su nombre de usuario: Valor que copió previamente de las Propiedades del servidor MySQL.
 - su contraseña: valor que proporcionó durante la creación del servidor de base de datos MySQL.
+
+![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/97619f8b-9cdc-4d44-88d8-34701c5fc644)
+
 
 7) Haga clic en Guardar para guardar la cadena de conexión.
 > Nota: Las cadenas de conexión configuradas aquí estarán disponibles como variables de entorno, con el prefijo del tipo de conexión para aplicaciones Java (también para aplicaciones PHP, Python y Node). En el archivo src/main/resources/application.properties, recuperamos la cadena de conexión reemplazando el siguiente código:
