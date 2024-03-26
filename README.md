@@ -1,4 +1,4 @@
-<h1 align="center">CVDS-lab-6</h1> :)
+<h1 align="center">CVDS-lab-6</h1>
 
 # Despliega mi primera aplicación en Azure
 
