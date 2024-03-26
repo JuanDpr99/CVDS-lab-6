@@ -113,5 +113,31 @@ Ahora ha instalado y configurado todos los recursos necesarios para implementar 
 ## Ejercicio 3: implementar los cambios en la aplicación web
 1) Conectate con un cliente FTP y sube el jar de la aplicación Java https://github.com/PDSW-ECI/spring-mvc-with-bootstrap, sigue este tutorial https://learn.microsoft.com/en-us/azure/app-service/deploy-ftp?tabs=portal
 
-Configuración del servicio FTP:
-<img width="1495" alt="image" src="https://github.com/PDSW-ECI/labs/assets/4140058/05f5d912-717b-497a-b58c-468368107219">
+<p align="center">Configuración en la base de datos</p>
+
+![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/ea05da84-2a67-48c1-8a25-9d3040d6003b)
+
+<p align="center">Configuración del servicio FTP</p>
+
+![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/6886ba5b-57e9-414a-aaf3-b52add9ad081)
+
+
+<p align="center">Conexión cliente FTP por medio de Winscp</p>
+Los datos de conexión fueron tomados desde el Centro de implementación en el portar de Azure 
+
+![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/9bd71391-c0b8-4475-9c13-e8c37d8ed0c7)
+
+Una vez hamos descargado la aplicación Java proporcionada por el profesor, compilamos el proyecto y modificamos el nombre del archivo .jar generado en el directorio target
+
+![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/bbca97d6-6f98-4060-b55a-302ce4bc0c90)
+
+Realizamos el despliegue de la aplicación:
+![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/c971bb70-0467-4121-9349-8f7d0e95cada)
+
+Presentamos problemos en su funcionameinto:
+
+![image](https://github.com/JuanDpr99/CVDS-lab-6/assets/77819591/ca73862a-8972-45d3-a60c-90b4e2213d44)
+[link](https://cvdsmyappweb2.azurewebsites.net/)
+
+
+
